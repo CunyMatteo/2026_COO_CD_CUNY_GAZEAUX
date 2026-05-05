@@ -1,0 +1,19 @@
+----------------------------------
+ANALYSE DES CLASSES DE CHARGEMENTS
+----------------------------------
+
+Initialisation:
+
+Notre système va initialiser ChargeurMagasin qui va cibler un répertoire (rep),
+
+Puis la méthode chargerMagasin() crée l'objet Magasin qui est destiné à recevoir les données.
+
+Et pour chaque fichier XML détecté, le ChargeurMagasin va:
+
+- Donner un CD à un ChargeurCD dédié.
+
+- Instancier l'objet CD (Artiste, Titre).
+
+- Et enfin pour le CD en question, l'objet extrait et encapsule ses propres pistes.
+
+Les cd sont ajouté via ajouteCd pour l'ajouter à la collection.
