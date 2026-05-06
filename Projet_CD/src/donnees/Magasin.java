@@ -27,7 +27,7 @@ public class Magasin {
 	 * ajoute un cd au magasin
 	 * 
 	 * @param cdAAjouter
-	 *            le cd a ajouter
+	 * le cd a ajouter
 	 */
 	public void ajouteCd(CD cdAAjouter) {
 		listeCds.add(cdAAjouter);
@@ -56,7 +56,7 @@ public class Magasin {
 	}
 	
 	/**
-	 * permet d'acceder à un CD
+	 * permet d'acceder ï¿½ un CD
 	 * 
 	 * @return le cd a l'indice i ou null si indice est non valide
 	 */
