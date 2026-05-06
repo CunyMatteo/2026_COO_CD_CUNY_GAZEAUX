@@ -56,7 +56,7 @@ public class Magasin {
 	}
 	
 	/**
-	 * permet d'acceder � un CD
+	 * permet d'acceder � un CD
 	 * 
 	 * @return le cd a l'indice i ou null si indice est non valide
 	 */
@@ -70,4 +70,27 @@ public class Magasin {
 
 	// TODO  ajouter une methode de tri
 
+	public ArrayList<CD> trierParArtiste() {
+		ArrayList<CD> listeTriee = new ArrayList<>();
+		ArrayList<CD> copieListe = new ArrayList<>(this.listeCds);
+
+		while (!copieListe.isEmpty()) {
+			int indiceMin = 0;
+
+			for (int i = 1; i < copieListe.size(); i++) {
+				// On compare les noms des artistes (en ignorant la casse)
+				String artisteI = copieListe.get(i).getNomArtiste();
+				String artisteMin = copieListe.get(indiceMin).getNomArtiste();
+
+				if (artisteI.compareToIgnoreCase(artisteMin) < 0) {
+					indiceMin = i;
+				}
+			}
+
+			// Déplacement du CD trouvé vers la liste triée
+			listeTriee.add(copieListe.remove(indiceMin));
+		}
+
+		return listeTriee;
+	}
 }
