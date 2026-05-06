@@ -97,5 +97,7 @@ public class CD {
 		return (resultat);
 	}
 
-	// TODO 
+	public String getNom(){
+		return this.nomCD;
+	}
 }
