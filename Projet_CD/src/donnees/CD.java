@@ -97,9 +97,15 @@ public class CD {
 		return (resultat);
 	}
 
+<<<<<<< HEAD
 	public String getNomArtiste() {
 		return nomArtiste;
 	}
 
 	// TODO
+=======
+	public String getNom(){
+		return this.nomCD;
+	}
+>>>>>>> 330d2595cc6d122f75d57faa350616c89e7c6fe7
 }

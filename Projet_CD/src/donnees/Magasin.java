@@ -27,7 +27,7 @@ public class Magasin {
 	 * ajoute un cd au magasin
 	 * 
 	 * @param cdAAjouter
-	 *            le cd a ajouter
+	 * le cd a ajouter
 	 */
 	public void ajouteCd(CD cdAAjouter) {
 		listeCds.add(cdAAjouter);
@@ -68,7 +68,28 @@ public class Magasin {
 		return(res);
 	}
 
-	// TODO  ajouter une methode de tri
+	public String getNomCd(int i)
+	{
+		CD res = null;
+		if ((i>=0)&&(i<this.listeCds.size()))
+			res=this.listeCds.get(i);
+        return(res.getNom());
+	}
+
+	public void trierAlbum() {
+		for (int i = 0; i < listeCds.size() - 1; i++) {
+			for (int j = i + 1; j < listeCds.size(); j++) {
+				CD cd1 = listeCds.get(i);
+				CD cd2 = listeCds.get(j);
+
+				if (cd1.getNom().compareTo(cd2.getNom()) > 0) {
+					listeCds.set(i, cd2);
+					listeCds.set(j, cd1);
+				}
+			}
+		}
+	}
+
 
 	public ArrayList<CD> trierParArtiste() {
 		ArrayList<CD> listeTriee = new ArrayList<>();

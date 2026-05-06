@@ -1,6 +1,4 @@
 package donnees;
-
-
 /**
  * la classe InfoPiste modelise les donnees d'une piste de CD a savoir
  * <ul>
