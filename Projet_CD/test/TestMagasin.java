@@ -1,8 +1,3 @@
-import donnees.CD;
-import donnees.Magasin;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
-
 public class TestMagasin {
 
     @Test
@@ -26,5 +21,21 @@ public class TestMagasin {
         assertEquals("Scarface", magasin.getCd(0).getNom(), "Le premier CD devrait être Scarface");
         assertEquals("Nanani Nanana", magasin.getCd(1).getNom(), "Le deuxième CD devrait être Nanani Nanana");
         assertEquals("Pocahotas", magasin.getCd(2).getNom(), "Le troisième CD devrait être Pocahotas");
+    }
+    @Test
+    public void testTrierArtiste() {
+        // 1. Initialisation
+        Magasin magasin = new Magasin();
+        magasin.ajouteCd(new CD("plk", "Pocahontas"));
+        magasin.ajouteCd(new CD("booba", "Scarface"));
+        magasin.ajouteCd(new CD("gazo", "Nanani Nanana"));
+
+        // 2. Action
+        ArrayList<CD> resultat = magasin.trierParArtiste();
+
+        // 3. Vérification de l'ordre (B -> G -> P)
+        assertEquals("booba", resultat.get(0).getNomArtiste(), "Le premier artiste devrait être Booba");
+        assertEquals("gazo", resultat.get(1).getNomArtiste(), "Le deuxième artiste devrait être Gazo");
+        assertEquals("plk", resultat.get(2).getNomArtiste(), "Le troisième artiste devrait être PLK");
     }
 }
