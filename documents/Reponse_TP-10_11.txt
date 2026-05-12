@@ -1,0 +1,9 @@
+--------------------
+Réponses TP10-11
+--------------------
+
+Question 3.
+
+Dans le cas, où on ajouterais un nouveau tri les conséquences seraient de devoir ajouter un getter, la méthode de tri et le test de la méthode 
+Nous devrions modifier 2 classes normales et la classe test. 
+Sur le long terme ça peut-être rébarbatif.

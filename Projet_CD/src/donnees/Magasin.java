@@ -68,14 +68,6 @@ public class Magasin {
 		return(res);
 	}
 
-	public String getNomCd(int i)
-	{
-		CD res = null;
-		if ((i>=0)&&(i<this.listeCds.size()))
-			res=this.listeCds.get(i);
-        return(res.getNom());
-	}
-
 	public void trierAlbum() {
 		for (int i = 0; i < listeCds.size() - 1; i++) {
 			for (int j = i + 1; j < listeCds.size(); j++) {
