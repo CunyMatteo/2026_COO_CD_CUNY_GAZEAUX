@@ -2,8 +2,32 @@
 Réponses TP10-11
 --------------------
 
+--------------------
 Question 3.
-
+--------------------
 Dans le cas, où on ajouterais un nouveau tri les conséquences seraient de devoir ajouter un getter, la méthode de tri et le test de la méthode 
 Nous devrions modifier 2 classes normales et la classe test. 
 Sur le long terme ça peut-être rébarbatif.
+
+--------------------
+Question 4.
+--------------------
+Nous avons travaillé en même temps chacun faisait une méthode de tri on a donc 2 méthodes de tri différentes. 
+Si un morceau de code comporterais des bugs il aurait donc avec les copier collés des bugs sur les différentes méthodes de tri.
+
+--------------------
+Question 5. 
+--------------------
+Le code en commun entre les deux méthodes de tri est l'utilisation d'une arrayList et d'un getter afin de pouvoir inverser facilement la position des Objets à trier.
+Le code qui diffère entre les méthodes est le choix défaire une méthode de tri par objets ce qui individualise les méthodes.
+
+--------------------
+Question 6. 
+--------------------
+Si on décide de changer la manière trier il faudrait garder le code des méthodes de tri actuelles car elle trieront dans tous les cas a l'utilisation de la méthode. Si on veut rendre cela plus dynamique il faudrait modifier les méthodes pour que ça se fasse directement.
+
+
+
+
+
+
