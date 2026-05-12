@@ -68,47 +68,17 @@ public class Magasin {
 		return(res);
 	}
 
-	public void trierAlbum() {
+	public void trier(ComparateurCd comp) {
 		for (int i = 0; i < listeCds.size() - 1; i++) {
 			for (int j = i + 1; j < listeCds.size(); j++) {
 				CD cd1 = listeCds.get(i);
 				CD cd2 = listeCds.get(j);
 
-				if (cd1.getNom().compareTo(cd2.getNom()) > 0) {
+				if (comp.etreAvant(cd2, cd1)) {
 					listeCds.set(i, cd2);
 					listeCds.set(j, cd1);
 				}
 			}
 		}
-	}
-
-
-	public ArrayList<CD> trierParArtiste() {
-		ArrayList<CD> listeTriee = new ArrayList<>();
-		ArrayList<CD> copieListe = new ArrayList<>(this.listeCds);
-
-		while (!copieListe.isEmpty()) {
-			int indiceMin = 0;
-
-			for (int i = 1; i < copieListe.size(); i++) {
-				// On compare les noms des artistes (en ignorant la casse)
-				String artisteI = copieListe.get(i).getNomArtiste();
-				String artisteMin = copieListe.get(indiceMin).getNomArtiste();
-
-				if (artisteI.compareToIgnoreCase(artisteMin) < 0) {
-					indiceMin = i;
-				}
-			}
-
-			// Déplacement du CD trouvé vers la liste triée
-			listeTriee.add(copieListe.remove(indiceMin));
-		}
-
-		return listeTriee;
-	}
-
-	public void trier(ComparateurCd comp){
-
-
 	}
 }
