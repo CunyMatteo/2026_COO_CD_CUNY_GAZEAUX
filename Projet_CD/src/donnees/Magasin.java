@@ -106,4 +106,9 @@ public class Magasin {
 
 		return listeTriee;
 	}
+
+	public void trier(ComparateurCd comp){
+
+
+	}
 }
